@@ -3,13 +3,32 @@
 
 <head>
      <title>EscapeTheRoom</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-     <div class=" art"></div>
+     <div class=" art">
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+               <h3 class="gallery w3-black w3-container">Play</h3>
+          </a>
+          
+          <h3 class="w3-black interaction w3-container" onclick="document.getElementById
+                          ('id01').style.display='block'" class="w3-button">How To Navigate...</h3>
+          <div id="id01" class="w3-modal">
+               <div class="w3-modal-content">
+                    <div class="w3-container popup1">
+                         <span onclick="document.getElementById('id01').style.display='none'"
+                              class="w3-button w3-display-topright">&times;</span>
+                         <h1>Instructions</h1>
+                         <p>WASD to move</p>
+                         <p>Click and drag mouse pad to turn</p>
+                    </div>
+               </div>
+          </div>
+          
+     </div>
 </body>
 
 </html>
