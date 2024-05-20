@@ -3,15 +3,24 @@ html {
   width: 100%;
 }
 
-.art{
-background-image: url("images/BlurredTypewriter.jpg");
+.art {
+  background-image: url("images/BlurredTypewriter.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .popup1{
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-size: 20px;
-text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: #e3cdb6;
+}
+
+h1{
+  background-color: #d4651dff;
+}
+
+p{
+  background-color: #d4651dff;
 }
