@@ -15,12 +15,30 @@ html {
   font-size: 20px;
   text-align: center;
   background-color: #e3cdb6;
+  border: 2px solid #a24d11;
 }
 
 h1{
   background-color: #d4651dff;
+  border: 3px solid #a24d11;
+  border-radius: 5px;
 }
 
 p{
   background-color: #d4651dff;
+  border: 3px solid #a24d11;
+  border-radius: 5px;
+}
+
+.exitbutton{
+  border: 2px solid #a24d11; 
+}
+
+.mainbuttons{
+  background-color: #d4651dff;
+  border: 5px solid #a24d11;
+  border-radius: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  text-align:center;
 }
