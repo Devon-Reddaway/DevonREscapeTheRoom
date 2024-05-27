@@ -10,15 +10,20 @@ html {
   background-size: cover;
 }
 
-.popup1{
+.popup{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
   text-align: center;
   background-color: #e3cdb6;
   border: 2px solid #a24d11;
+  width: 25vw;
+  height: 100vh;
+  right: 0px;
+
 }
 
 h1{
+  font-size: 45px;
   background-color: #d4651dff;
   border: 3px solid #a24d11;
   border-radius: 5px;
@@ -28,6 +33,7 @@ p{
   background-color: #d4651dff;
   border: 3px solid #a24d11;
   border-radius: 5px;
+  font-size: 35px;
 }
 
 .exitbutton{
@@ -41,5 +47,16 @@ p{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 40px;
   text-align: center;
-  width: 40%;
+  width: 35%;
+  margin-left: 32%;
+ 
+}
+
+header{
+ margin-left: 25%;
+
+}
+
+.moveDown{
+  margin-top: 8vh;
 }
