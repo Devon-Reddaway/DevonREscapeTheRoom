@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EscapeTheRoom</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--Installing A-Frame-->
+  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+
+  <!--Script needed to create the navmesh in the inspector-->
+
+  <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
+
+  <!-- A-frame extras-->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+</head>
+
+<body>
+  <a-scene physics="gravity: -9.8; restitution: 0.1" inspector-plugin-recast>
+    <a-gltf-model src="https://codehs.com/uploads/d23de03983770e14ffa88f6019eed075" position="0 -0.1 0" nav-mesh
+      visible="false"></a-gltf-model>
+
+    <a-sky color="lightblue"></a-sky>
+
+    <a-light id="amb" type="ambient" intensity="0.5"></a-light>
+
+    <a-light id="dir" type="directional" position="6.17 8.22689 -3.11067" color="white"
+      light="castShadow: true"></a-light>
+
+    <a-plane id="floor" shadow="recieve: true" src="images/DarkWood.jpg" rotation="-90 0 0" scale="20 20 20"
+      position="0 -0.01 0"></a-plane>
+
+
+    <a-plane id="backWallTop" position="0 9.5 -10" rotation="" src="images/TatteredWallpaper.jfif" scale="20 12 1"
+     ></a-plane>
+
+    <a-plane id="backWallBot" position="0 1 -10" rotation="" src="images/DarkWood.jpg" scale="20 5 24" ></a-plane>
+
+    <a-plane id="leftWallTop" position="-10 9.5 0" rotation="0 90 0" src="images/TatteredWallpaper.jfif"
+      scale="20 12 1" rotation="0 90 0"></a-plane>
+    
+    <a-plane id="leftWallBot" position="0 1 -10" rotation="" src="images/DarkWood.jpg" scale="20 5 24" ></a-plane>
+
+    <a-plane id="rightWallTop" position="10 9.5 0" rotation="0 -90 0" src="images/TatteredWallpaper.jfif"
+      scale="20 12 1"></a-plane>
+
+    <a-plane id="rightWallBot" position="0 1 -10" rotation=""
+      src="images/DarkWood.jpg" scale="20 5 24" rotation="0 -90 0" ></a-plane>
+
+    <a-plane id="frontWallTop" position="0 9.5 10." rotation="180 0 0" src="images/TatteredWallpaper.jfif"
+      scale="20 12 1"></a-plane>
+
+    <a-plane id="frontWallBot" position="0 1 -10" rotation=""
+      src="images/DarkWood.jpg" scale="20 5 24" rotation="180 0 0" ></a-plane>
+
+
+
+    <a-entity id="rig" position="0 0 6" movement-controls="constrainToNavMesh: true; speed: 0.5;">
+      <a-entity camera id="camera" position="0 4.8 0" look-controls="pointerLockEnabled: false" extended-wasd-controls="flyEnabled: true; 
+              turnEnabled: true; lookEnabled: true; maxLookAngle: 60;">
+      </a-entity>
+    </a-entity>
+
+  </a-scene>
+</body>
+
+</html>
