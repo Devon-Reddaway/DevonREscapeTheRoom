@@ -21,11 +21,10 @@
 
 <body>
   <a-scene physics="gravity: -9.8; restitution: 0.1" inspector-plugin-recast>
-    <a-gltf-model src="https://codehs.com/uploads/d23de03983770e14ffa88f6019eed075" position="0 -0.1 0" nav-mesh
+    <a-gltf-model src="" position="0 -0.1 0" nav-mesh
       visible="false"></a-gltf-model>
 
-    <a-sky color="lightblue"></a-sky>
-
+   
     <a-light id="amb" type="ambient" intensity="0.5"></a-light>
 
     <a-light id="dir" type="directional" position="6.17 8.22689 -3.11067" color="white"
@@ -35,27 +34,21 @@
       position="0 -0.01 0"></a-plane>
 
 
-    <a-plane id="backWallTop" position="0 9.5 -10" rotation="" src="images/TatteredWallpaper.jfif" scale="20 12 1"
-     ></a-plane>
+    <a-plane id="backWallTop" position="0 9.5 -15" src="images/TatteredWallpaper.jfif" scale="25 12 1" material="" geometry=""></a-plane>
 
-    <a-plane id="backWallBot" position="0 1 -10" rotation="" src="images/DarkWood.jpg" scale="20 5 24" ></a-plane>
+    <a-plane id="backWallBot" position="0 1 -15" src="images/DarkWood.jpg" scale="28 5 24" material="" geometry=""></a-plane>
 
-    <a-plane id="leftWallTop" position="-10 9.5 0" rotation="0 90 0" src="images/TatteredWallpaper.jfif"
-      scale="20 12 1" rotation="0 90 0"></a-plane>
+    <a-plane id="leftWallTop" position="-13 9.5 0" rotation="0 90 0" src="images/TatteredWallpaper.jfif" scale="20 12 1" material="" geometry=""></a-plane>
     
-    <a-plane id="leftWallBot" position="0 1 -10" rotation="" src="images/DarkWood.jpg" scale="20 5 24" ></a-plane>
+    <a-plane id="leftWallBot" position="-13 1 0" rotation="0 90 0" src="images/DarkWood.jpg" scale="20 5 24" material="" geometry=""></a-plane>
 
-    <a-plane id="rightWallTop" position="10 9.5 0" rotation="0 -90 0" src="images/TatteredWallpaper.jfif"
-      scale="20 12 1"></a-plane>
+    <a-plane id="rightWallBot" position="15 1 0" rotation="0 -90 0" src="images/DarkWood.jpg" scale="20 5 24" material="" geometry=""></a-plane>
 
-    <a-plane id="rightWallBot" position="0 1 -10" rotation=""
-      src="images/DarkWood.jpg" scale="20 5 24" rotation="0 -90 0" ></a-plane>
+    <a-plane id="rightWallTop" position="15 9.5 0" rotation="0 -90 0" src="images/TatteredWallpaper.jfif" scale="20 12 1" material="" geometry=""></a-plane>
 
-    <a-plane id="frontWallTop" position="0 9.5 10." rotation="180 0 0" src="images/TatteredWallpaper.jfif"
-      scale="20 12 1"></a-plane>
+    <a-plane id="frontWallTop" position="0 9.5 15" rotation="180 0 0" src="images/TatteredWallpaper.jfif" scale="28 12 1" material="" geometry=""></a-plane>
 
-    <a-plane id="frontWallBot" position="0 1 -10" rotation=""
-      src="images/DarkWood.jpg" scale="20 5 24" rotation="180 0 0" ></a-plane>
+    <a-plane id="frontWallBot" position="0 1 15" rotation="0 180 0" src="images/DarkWood.jpg" scale="28 5 24" material="" geometry=""></a-plane>
 
 
 
