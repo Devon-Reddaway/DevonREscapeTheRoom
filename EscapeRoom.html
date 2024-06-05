@@ -30,27 +30,47 @@
     <a-light id="dir" type="directional" position="6.17 8.22689 -3.11067" color="white"
       light="castShadow: true"></a-light>
 
-    <a-plane id="floor" shadow="recieve: true" src="images/DarkWood.jpg" rotation="-90 0 0" scale="20 20 20"
-      position="0 -0.01 0"></a-plane>
+    <a-plane id="floor" shadow="recieve: true" src="images/DarkWood.jpg" rotation="-90 0 0" scale="28.3 28.5 20" position="-0.1 -0.01 0" material="" geometry=""></a-plane>
 
+    <a-plane id="ceiling" src="images/DarkWood.jpg" rotation="90 0 0" scale="28.3 28.5 20" position="-0.1 15.5 0" material="" geometry=""></a-plane>
 
-    <a-plane id="backWallTop" position="0 9.5 -15" src="images/TatteredWallpaper.jfif" scale="25 12 1" material="" geometry=""></a-plane>
+      <a-gltf-model id="bookcase" position="13.4 7.5 6" src="Models/bookshelf.glb" scale="8 8 3" rotation="180 90 180"></a-gltf-model>
 
-    <a-plane id="backWallBot" position="0 1 -15" src="images/DarkWood.jpg" scale="28 5 24" material="" geometry=""></a-plane>
+    <a-plane id="backWallTop" position="0 9.5 -14.3" src="images/TatteredWallpaper.jfif" scale="28.3 12 1"></a-plane>
 
-    <a-plane id="leftWallTop" position="-13 9.5 0" rotation="0 90 0" src="images/TatteredWallpaper.jfif" scale="20 12 1" material="" geometry=""></a-plane>
+    <a-plane id="backWallBot" position="0 1 -14.3" src="images/DarkWood.jpg" scale="28.3 5 24"></a-plane>
+
+    <a-plane id="leftWallTop" position="-14 9.5 0" rotation="0 90 0" src="images/TatteredWallpaper.jfif" scale="28.5 12 1"></a-plane>
+
+    <a-plane id="leftWallBot" position="-14 1 0" rotation="0 90 0" src="images/DarkWood.jpg" scale="28.5 5 24"></a-plane>
+
+    <a-plane id="rightWallBot" position="14 1 -6.61508" rotation="0 -90 0" src="images/DarkWood.jpg" scale="15.5 5 24" ></a-plane>
+
+    <a-plane id="rightWallBot-2" position="14 1 18" rotation="0 -90 0" src="images/DarkWood.jpg" scale="15.5 5 24"></a-plane>
+
+    <a-plane id="rightWallTop" position="14 9.5 -6.615" rotation="0 -90 0" src="images/TatteredWallpaper.jfif" scale="15.5 12 1"></a-plane>
     
-    <a-plane id="leftWallBot" position="-13 1 0" rotation="0 90 0" src="images/DarkWood.jpg" scale="20 5 24" material="" geometry=""></a-plane>
+    <a-plane id="rightWallTop-2" position="14 9.5 18" rotation="0 -90 0" src="images/TatteredWallpaper.jfif" scale="15.5 12 1"></a-plane>
 
-    <a-plane id="rightWallBot" position="15 1 0" rotation="0 -90 0" src="images/DarkWood.jpg" scale="20 5 24" material="" geometry=""></a-plane>
+    <a-plane id="rightWallTop-3" position="14 18.25 6.2" rotation="0 -90 0" src="images/TatteredWallpaper.jfif" scale="10.26 12 11.84029"></a-plane>
 
-    <a-plane id="rightWallTop" position="15 9.5 0" rotation="0 -90 0" src="images/TatteredWallpaper.jfif" scale="20 12 1" material="" geometry=""></a-plane>
+    <a-plane id="frontWallTop" position="0 9.5 14.3" rotation="180 0 0" src="images/TatteredWallpaper.jfif" scale="28.3 12 1"></a-plane>
 
-    <a-plane id="frontWallTop" position="0 9.5 15" rotation="180 0 0" src="images/TatteredWallpaper.jfif" scale="28 12 1" material="" geometry=""></a-plane>
+    <a-plane id="frontWallBot" position="0 1 14.3" rotation="0 180 0" src="images/DarkWood.jpg" scale="28.3 5 24"></a-plane>
 
-    <a-plane id="frontWallBot" position="0 1 15" rotation="0 180 0" src="images/DarkWood.jpg" scale="28 5 24" material="" geometry=""></a-plane>
+    <a-plane id="dungeonBackWall" position="24 7 -14.3" src="images/EvilBricks.jfif" scale="20 17 1" material="" geometry=""></a-plane>
 
+    <a-plane id="dungeonRightWall" position="34 7 0" src="images/EvilBricks.jfif" scale="29.14233 17 1" material="" geometry="" rotation="179.9998479605043 90 179.9998479605043"></a-plane>
 
+    <a-plane id="dungeonLeftWall" position="14 7 -6.29126" src="images/EvilBricks.jfif" scale="15.75897 17 1" material="" geometry="" rotation="0 90 0"></a-plane>
+
+    <a-plane id="dungeonLeftWall-2" position="14 7 20.8" src="images/EvilBricks.jfif" scale="20 17 1" material="" geometry="" rotation="0 90 0"></a-plane>
+
+    <a-plane id="dungeonFrontWall" position="24 7 14.3" src="images/EvilBricks.jfif" scale="20 17 1" material="" geometry="" rotation="0 180 0"></a-plane>
+
+    <a-plane id="dungeonCeiling" position="24 15.2 0" src="images/EvilBricks.jfif" scale="20 30 1" material="" geometry="" rotation="90 0 0"></a-plane>
+
+    <a-plane id="dungeonFloor" shadow="recieve: true" position="24 -0.01 0.7" src="images/EvilBricks.jfif" scale="20 30 1" material="" geometry="" rotation="-90 0 0"></a-plane>
 
     <a-entity id="rig" position="0 0 6" movement-controls="constrainToNavMesh: true; speed: 0.5;">
       <a-entity camera id="camera" position="0 4.8 0" look-controls="pointerLockEnabled: false" extended-wasd-controls="flyEnabled: true; 
@@ -62,3 +82,4 @@
 </body>
 
 </html>
+
