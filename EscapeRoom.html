@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>EscapeTheRoom</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css"/>
   <!--Installing A-Frame-->
   <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 
@@ -29,7 +29,7 @@
 
     <a-light id="dir" type="directional" position="-13.51676 8.10764 -5.62595" color="white" light="castShadow: true"></a-light>
 
-    <a-light id="dir" type="directional" position="22.438 11.251 -3.111" color="black" light="castShadow: true"></a-light>
+    <a-light id="dir2" type="directional" position="22.438 11.251 -3.111" color="black" light="castShadow: true"></a-light>
 
     <a-plane id="floor" shadow="recieve: true;" src="images/DarkWood.jpg" rotation="-90 0 0" scale="14.15 15 10" position="-7.25 -0.01 0" material="" geometry=""></a-plane>
 
@@ -69,38 +69,17 @@
     
     <a-plane id="frontWallBot" position="-7.2 1 7.15" rotation="0 180 0" src="images/DarkWood.jpg" scale="14.15 2.5 24" material="" geometry=""></a-plane>
   
-    <a-gltf-model id="bookImp1" position="-0.65 1.65 1.8" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="90 90 90" gltf-model="Models/simple_book.glb"
-      animation__1="
-      property: rotation;
-      from: 90 90 90;
-      to: 60 90 90;
-      dur:1000;
-      easing: linear;
-      startEvents: click;"
-      ></a-gltf-model>
-    
-    <a-gltf-model id="bookImp2" position="-0.48 3.25 3" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="90 0 0"></a-gltf-model>
 
-    <a-gltf-model id="bookImp3" position="-0.48 4.85 1" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="90 0 0" gltf-model="Models/simple_book.glb"></a-gltf-model>
+    <a-gltf-model id="bookImp1" position="-6.8 2.5 -2.6" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="0 0 0" gltf-model="Models/simple_book.glb" 
+      
+      animation__1="property: position; from: -6.8 2.5 -2.6; to: -6.8 4 -2.6; easing: linear; startEvents: click;"
 
-    <a-gltf-model id="bookImp4" position="-0.48 6.475 4" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="90 0 0" gltf-model="Models/simple_book.glb"></a-gltf-model>
+       animation__1.1="property: rotation; from: 0 0 0; to: 90 90 90; easing: linear; startEvents: animationcomplete__1;"
 
-    <a-gltf-model id="bookHard1" position="-0.53 6.45 3.1" src="Models/hard_book.glb" scale="2.5 3 3" rotation="90 0 0" gltf-model="Models/hard_book.glb"></a-gltf-model>
+       animation__2="property: position; from: -6.8 4 -2.6; to: 1 1 1; easing: linear; dur: 1; startEvents: animationcomplete__1.1;"
+      > </a-gltf-model>
 
-    <a-gltf-model id="bookHard2" position="-0.53 4.85 4.2" src="Models/hard_book.glb" scale="2.5 3 3" rotation="90 0 0" gltf-model="Models/hard_book.glb"></a-gltf-model>
-
-    <a-gltf-model id="bookHard3" position="-0.53 1.64 1.2" src="Models/hard_book.glb" scale="2.5 3 3" rotation="90 90 90" gltf-model="Models/hard_book.glb"
-    
-      ></a-gltf-model>
-
-    <a-gltf-model id="bookHard4" position="-0.53 3.25 2.3" src="Models/hard_book.glb" scale="2.5 3 3" rotation="90 90 90" gltf-model="Models/hard_book.glb"
-      animation__2="
-      property: rotation;
-      from: 90 90 90;
-      to: 60 90 90;
-      dur:1000;
-      easing: linear;
-      startEvents: click;"></a-gltf-model>
+    <a-plane id="oldPainting" src="images/oldPainting.jpg" material="" geometry="" position="-7.3 5.25 -7.19" scale="4 4 4"></a-plane>
 
     <a-plane id="dungeonBackWall" position="24 7 -14.3" src="images/EvilBricks.jfif" scale="20 17 1" material="" geometry=""></a-plane>
 
@@ -116,10 +95,10 @@
 
     <a-plane id="dungeonFloor" shadow="recieve: true" position="24 -0.01 0.7" src="images/EvilBricks.jfif" scale="20 30 1" material="" geometry="" rotation="-90 0 0"></a-plane>
 
-    <a-gltf-model id="hangingLight" position="14.31307 -2 -18.48058" src="Models/hangingLight.glb" scale="4.67063 2.1016 4.67063" gltf-model="Models/hangingLight.glb"></a-gltf-model>
+    <a-gltf-model id="hangingLight" position="14.3 -2 -18.48" src="Models/hangingLight.glb" scale="4.67 2.1 4.67" gltf-model="Models/hangingLight.glb"></a-gltf-model>
 
     <a-entity id="rig" position="0 0 6" movement-controls="constrainToNavMesh: true; speed: 0.5;">
-      <a-entity camera id="camera" position="0 2.6 0" look-controls="pointerLockEnabled: false" extended-wasd-controls="flyEnabled: true; 
+      <a-entity camera id="camera" position="0 3 0" look-controls="pointerLockEnabled: false" extended-wasd-controls="flyEnabled: true; 
               turnEnabled: true; lookEnabled: true; maxLookAngle: 60;">
       </a-entity>
     </a-entity>
