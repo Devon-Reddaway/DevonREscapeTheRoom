@@ -58,5 +58,8 @@ header{
 }
 
 .moveDown{
-  margin-top: 8vh;
+  margin-top: 2vh;
+  margin-left: 1vh;
+  height: 30vh;
+  width: 45vw;
 }

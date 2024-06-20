@@ -23,7 +23,9 @@
   <a-scene cursor="rayOrigin: mouse;" physics="gravity: -9.8; restitution: 0.1" inspector-plugin-recast>
     <a-gltf-model src="" position="0 -0.1 0" nav-mesh
       visible="false"></a-gltf-model>
-
+  
+    <a-gltf-model src="navmesh.gltf"
+      position="0 -0.1 0" nav-mesh visible="false"></a-gltf-model> 
    
     <a-light id="amb" type="ambient" intensity="1"></a-light>
 
@@ -33,8 +35,10 @@
 
     <a-plane id="floor" shadow="recieve: true;" src="images/DarkWood.jpg" rotation="-90 0 0" scale="14.15 15 10" position="-7.25 -0.01 0" material="" geometry=""></a-plane>
 
-    <a-plane id="ceiling" src="images/DarkWood.jpg" rotation="90 0 0" scale="28.3 28.5 20" position="-0.1 15.4 0"></a-plane>
+    <a-plane id="ceiling" src="images/DarkWood.jpg" rotation="90 0 0" scale="28.3 28.5 20" position="-0.1 8 0" material="" geometry=""></a-plane>
 
+
+    
     <a-gltf-model id="bookcase" position="-0.48 3.9 2.9" src="Models/bookshelf.glb" scale="4 4 1.5" rotation="180 90 180" gltf-model="Models/bookshelf.glb"
       animation__5="
       property: position;
@@ -67,38 +71,36 @@
 
     <a-plane id="frontWallTop" position="-7.2 5.25 7.15" rotation="180 0 0" src="images/TatteredWallpaper.jfif" scale="14.15 6 1" material="" geometry=""></a-plane>
     
-    <a-plane id="frontWallBot" position="-7.2 1 7.15" rotation="0 180 0" src="images/DarkWood.jpg" scale="14.15 2.5 24" material="" geometry=""></a-plane>
-  
+    <a-plane id="frontWallBot" position="-7.2 1 7.15" rotation="0 180 0" src="images/DarkWood.jpg" scale="14.15 2.5 24"></a-plane>
 
+    <a-box id="brick1" position="-7.7 1.43 7.7" rotation="0 -180 0" src="images/brick.jpg" scale="2.5 2.5 2.5" material="" geometry=""></a-box>
+
+    <a-box id="brick2" position="-7.7 4.2 8.1" rotation="0 -180 0" src="images/brick.jpg" scale="1 3.3 2.5" material="" geometry=""></a-box>
+
+    <a-box id="brick3" position="-7.7 7.5 8.1" rotation="0 -180 0" src="images/brick.jpg" scale="1 3.3 2.5" material="" geometry=""></a-box>
+    
+    <a-plane id="fire" position="-7.7 1.27437 6.44" rotation="0 -180 0" src="images/fire.jpg" scale="2 2 2" material="" geometry=""></a-plane>
+      
     <a-gltf-model id="bookImp1" position="-6.8 2.5 -2.6" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="0 0 0" gltf-model="Models/simple_book.glb" 
       
       animation__1="property: position; from: -6.8 2.5 -2.6; to: -6.8 4 -2.6; easing: linear; startEvents: click;"
 
        animation__1.1="property: rotation; from: 0 0 0; to: 90 90 90; easing: linear; startEvents: animationcomplete__1;"
 
-       animation__2="property: position; from: -6.8 4 -2.6; to: 1 1 1; easing: linear; dur: 1; startEvents: animationcomplete__1.1;"
+       animation__1.2="property: position; from: -6.8 4 -2.6; to: 1 1 1; easing: linear; dur: 1; startEvents: animationcomplete__1.1;"
       > </a-gltf-model>
+
+    <a-gltf-model id="bookImp2" position="-6.7 2.7 6.7" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="" gltf-model="Models/simple_book.glb" animation__2="property: position; from: -6.7 2.7 6.7; to: -6.7 4.2 6.7; easing: linear; startEvents: click" animation__2.1="property: rotation; from: 0 0 0; to: 90 90 90; easing: linear; startEvents: animationcomplete__2" animation__2.2="property: position; from: -6.7 4.2 6.7; to: 1 1 1; easing: linear; dur: 1; startEvents: animationcomplete__2.1"> </a-gltf-model>
+
+    <a-gltf-model id="bookImp3" position="-0.5 5 2.5" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="90 90 90" gltf-model="Models/simple_book.glb" animation__3="property: position; from: -0.5 5 2.5; to: -0.5 6.5 2.5; easing: linear; startEvents: click" animation__3.1="property: rotation; from: 90 90 90; to: 90 270 90; easing: linear; startEvents: animationcomplete__3" animation__3.2="property: position; from: -0.5 6.5 2.5; to: 1 1 1; easing: linear; dur: 1; startEvents: animationcomplete__3.1"> </a-gltf-model>
 
     <a-plane id="oldPainting" src="images/oldPainting.jpg" material="" geometry="" position="-7.3 5.25 -7.19" scale="4 4 4"></a-plane>
 
-    <a-plane id="dungeonBackWall" position="24 7 -14.3" src="images/EvilBricks.jfif" scale="20 17 1" material="" geometry=""></a-plane>
-
-    <a-plane id="dungeonRightWall" position="34 7 0" src="images/EvilBricks.jfif" scale="29.14233 17 1" material="" geometry="" rotation="179.9998479605043 90 179.9998479605043"></a-plane>
-
-    <a-plane id="dungeonLeftWall" position="14 7 -6.29126" src="images/EvilBricks.jfif" scale="15.75897 17 1" material="" geometry="" rotation="0 90 0"></a-plane>
-
-    <a-plane id="dungeonLeftWall-2" position="14 7 20.8" src="images/EvilBricks.jfif" scale="20 17 1" material="" geometry="" rotation="0 90 0"></a-plane>
-
-    <a-plane id="dungeonFrontWall" position="24 7 14.3" src="images/EvilBricks.jfif" scale="20 17 1" material="" geometry="" rotation="0 180 0"></a-plane>
-
-    <a-plane id="dungeonCeiling" position="24 15.2 0" src="images/EvilBricks.jfif" scale="20 30 1" material="" geometry="" rotation="90 0 0"></a-plane>
-
-    <a-plane id="dungeonFloor" shadow="recieve: true" position="24 -0.01 0.7" src="images/EvilBricks.jfif" scale="20 30 1" material="" geometry="" rotation="-90 0 0"></a-plane>
-
-    <a-gltf-model id="hangingLight" position="14.3 -2 -18.48" src="Models/hangingLight.glb" scale="4.67 2.1 4.67" gltf-model="Models/hangingLight.glb"></a-gltf-model>
+    <a-gltf-model id="hangingLight" position="-10.1 1.4 -6.5" src="Models/hangingLight.glb" scale="2 0.8 2" gltf-model="Models/hangingLight.glb"></a-gltf-model>
 
     <a-entity id="rig" position="0 0 6" movement-controls="constrainToNavMesh: true; speed: 0.5;">
-      <a-entity camera id="camera" position="0 3 0" look-controls="pointerLockEnabled: false" extended-wasd-controls="flyEnabled: true; 
+      
+      <a-entity camera id="camera" position="-5 3 0" look-controls="pointerLockEnabled: false" extended-wasd-controls="flyEnabled: true; 
               turnEnabled: true; lookEnabled: true; maxLookAngle: 60;">
       </a-entity>
     </a-entity>
