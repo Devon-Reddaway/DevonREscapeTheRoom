@@ -9,6 +9,7 @@
   <!--Installing A-Frame-->
   <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 
+  <script src="script.js"></script>
   <!--Script needed to create the navmesh in the inspector-->
 
   <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
@@ -17,21 +18,20 @@
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
   <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+  
 </head>
 
 <body>
   <a-scene cursor="rayOrigin: mouse;" physics="gravity: -9.8; restitution: 0.1" inspector-plugin-recast>
-    <a-gltf-model src="" position="0 -0.1 0" nav-mesh
-      visible="false"></a-gltf-model>
   
-    <a-gltf-model src="navmesh.gltf"
-      position="0 -0.1 0" nav-mesh visible="false"></a-gltf-model> 
+    <a-gltf-model src="navmesh2.gltf" position="5 -0.1 0" 
+      nav-mesh visible="false"></a-gltf-model> 
    
     <a-light id="amb" type="ambient" intensity="1"></a-light>
 
     <a-light id="dir" type="directional" position="-13.51676 8.10764 -5.62595" color="white" light="castShadow: true"></a-light>
 
-    <a-light id="dir2" type="directional" position="22.438 11.251 -3.111" color="black" light="castShadow: true"></a-light>
+   
 
     <a-plane id="floor" shadow="recieve: true;" src="images/DarkWood.jpg" rotation="-90 0 0" scale="14.15 15 10" position="-7.25 -0.01 0" material="" geometry=""></a-plane>
 
@@ -94,7 +94,13 @@
 
     <a-gltf-model id="bookImp3" position="-0.5 5 2.5" src="Models/simple_book.glb" scale="2.2 4 2.2" rotation="90 90 90" gltf-model="Models/simple_book.glb" animation__3="property: position; from: -0.5 5 2.5; to: -0.5 6.5 2.5; easing: linear; startEvents: click" animation__3.1="property: rotation; from: 90 90 90; to: 90 270 90; easing: linear; startEvents: animationcomplete__3" animation__3.2="property: position; from: -0.5 6.5 2.5; to: 1 1 1; easing: linear; dur: 1; startEvents: animationcomplete__3.1"> </a-gltf-model>
 
-    <a-plane id="oldPainting" src="images/oldPainting.jpg" material="" geometry="" position="-7.3 5.25 -7.19" scale="4 4 4"></a-plane>
+
+
+
+    <a-gltf-model id="bookFinal" src="Models/hard_book.glb" onclick="changeVisibility()" position="-9 0.1 -4" gltf-model="Models/hard_book.glb"></a-gltf-model>
+    
+
+    <a-plane id="oldPainting" src="images/oldPainting.jpg" position="-7.3 5.25 -7.19" scale="4 4 4"></a-plane>
 
     <a-gltf-model id="hangingLight" position="-10.1 1.4 -6.5" src="Models/hangingLight.glb" scale="2 0.8 2" gltf-model="Models/hangingLight.glb"></a-gltf-model>
 
@@ -102,6 +108,7 @@
       
       <a-entity camera id="camera" position="-5 3 0" look-controls="pointerLockEnabled: false" extended-wasd-controls="flyEnabled: true; 
               turnEnabled: true; lookEnabled: true; maxLookAngle: 60;">
+        <a-plane id="win" scale="15 7.5 1" src="images/endScreen.jpeg" visible="false" position="0 0 -4"></a-plane>
       </a-entity>
     </a-entity>
 
